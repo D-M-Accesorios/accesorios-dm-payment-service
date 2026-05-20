@@ -7,10 +7,7 @@ services:
       - "9000:9000"
     environment:
       - PORT=9000
-      - DATABASE_URL=postgresql://admin:admin123@accesorios-dm-postgres-prod:5432/accesorios_dm_db
-    volumes:
-      - ./:/app
-      - /app/node_modules
+      - DATABASE_URL=${DATABASE_URL}
     networks:
       - accesorios-dm-net-prod
 
