@@ -8,6 +8,7 @@ services:
     environment:
       - PORT=9000
       - DATABASE_URL=${DATABASE_URL}
+      - SECURITY_SERVICE_URL=${SECURITY_SERVICE_URL}
     networks:
       - accesorios-dm-net-prod
 
