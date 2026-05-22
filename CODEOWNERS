@@ -1,0 +1,32 @@
+# CODEOWNERS — accesorios-dm-payment-service
+#
+# IMPORTANTE: Crear los equipos en GitHub antes de activar require_code_owner_reviews:
+#   - @D-M-Accesorios/leads      → arquitectos / tech leads
+#   - @D-M-Accesorios/backend    → desarrolladores backend
+
+# Propietario por defecto
+*                                   @D-M-Accesorios/leads
+
+# Infraestructura
+Dockerfile                          @D-M-Accesorios/leads
+docker-compose.yml                  @D-M-Accesorios/leads
+
+# Dependencias Node.js
+package.json                        @D-M-Accesorios/leads
+package-lock.json                   @D-M-Accesorios/leads
+
+# Schema Prisma — cambios aquí afectan la BD directamente
+prisma/schema.prisma                @D-M-Accesorios/leads
+prisma/                             @D-M-Accesorios/leads @D-M-Accesorios/backend
+
+# Configuración Prisma
+prisma.config.ts                    @D-M-Accesorios/leads
+
+# Variables de entorno
+.env.example                        @D-M-Accesorios/leads
+
+# Workflows CI/CD
+.github/                            @D-M-Accesorios/leads
+
+# Código fuente
+src/                                @D-M-Accesorios/backend @D-M-Accesorios/leads
